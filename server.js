@@ -1,7 +1,7 @@
 const { animals } = require('./data/animals');
 const express = require('express');
-const { resolveNaptr } = require('dns');
-
+// const { resolveNaptr } = require('dns');
+const PORT = process.env.PORT || 3001;
 const app = express();
 
 function filterByQuery(query, animalsArray) {
@@ -51,8 +51,8 @@ app.get('/api/animals', (req, res) => {
     res.json(results);
   });
 
-app.listen(3001, () => {
-    console.log(`API server now on pot 3001!`);
+app.listen(PORT, () => {
+    console.log(`API server now on pot ${PORT}!`);
 });
 
 
