@@ -27,7 +27,7 @@ const handleAnimalFormSubmit = event => {
   }
   const animalObject = { name, species, diet, personalityTraits };
 
-  fetch('/api/animals', {
+  fetch('api/animals', {
     method: 'POST',
     headers: {
       Accept: 'application/json',
@@ -76,7 +76,6 @@ const handleZookeeperFormSubmit = event => {
       alert('Thank you for adding a zookeeper!');
     });
 };
-
 
 $animalForm.addEventListener('submit', handleAnimalFormSubmit);
 $zookeeperForm.addEventListener('submit', handleZookeeperFormSubmit);
